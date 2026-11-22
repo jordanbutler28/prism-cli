@@ -3,11 +3,15 @@ package model
 enum class Category (
     val display: String
 ) {
-   ACTIONS("Actions"),
-   FEEDBACK("Feedback"),
-   INPUTS("Inputs"),
-   NAVIGATION("Navigation"),
-   TYPOGRAPHY("Typography"),
+    ACTIONS("Actions"),
+    FEEDBACK("Feedback"),
+    LAYOUTS("Layouts"),
+    INPUTS("Inputs"),
+    NAVIGATION("Navigation"),
+    DATA_DISPLAY("Data Display"),
+    MEDIA("Media"),
+    OVERLAYS("Overlays"),
+    OTHER("Other")
 }
 
 enum class State (
@@ -22,7 +26,7 @@ enum class State (
 data class Component (
     var id: Int = 0,
     var name: String = "",
-    var category:  Category = Category.ACTIONS,
+    var category:  Category = Category.OTHER,
     var state: State = State.DEFAULT,
     var minWidth: Int = 0,
     var minHeight: Int = 0,

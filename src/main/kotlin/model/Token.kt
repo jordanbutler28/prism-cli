@@ -5,15 +5,17 @@ enum class Type (
 ) {
     COLOUR("Colour"),
     TYPOGRAPHY("Typography"),
-    PADDING("Padding"),
-    MARGINS("Margins"),
-    BORDERS("Border Radius"),
+    SPACING("Spacing"),
+    BORDER_WIDTH("Border Width"),
+    BORDER_RADIUS("Border Radius"),
+    OPACITY("Opacity"),
     SHADOW("Shadow"),
+    OTHER("Other"),
 }
 
 class Token (
     var id: Int = 0,
     var name: String = "",
-    var type: Type = Type.COLOUR,
+    var type: Type = Type.OTHER,
     var value: String = "",
 )
