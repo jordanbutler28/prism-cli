@@ -12,9 +12,9 @@ fun isValidCategory(categoryToCheck: String?): Boolean =
 val states = setOf("Default", "Active", "Hover", "Disabled")
 
 fun isValidState(stateToCheck: String?): Boolean =
-    stateToCheck != null && states.any { it.equals(stateToCheck, true) }
+    stateToCheck != null && states.any { it.equals(stateToCheck.trim(), true) }
 
 val types = setOf("Colour", "Typography", "Spacing", "Border Width", "Border Radius", "Opacity", "Shadow", "Other")
 
 fun isValidType(typeToCheck: String?): Boolean =
-    typeToCheck != null && types.any { it.equals(typeToCheck, true) }
+    typeToCheck != null && types.any { it.equals(typeToCheck.trim(), true) }
