@@ -30,4 +30,14 @@ data class Component (
     var state: State = State.DEFAULT,
     var minWidth: Int = 0,
     var minHeight: Int = 0,
-)
+) {
+    override fun toString(): String =
+        """
+        #$id
+        Name: $name
+        Category: ${category.display}
+        State: ${state.display}
+        Min Width: $minWidth
+        Min Height: $minHeight
+        """.trimIndent() + "\n"
+}

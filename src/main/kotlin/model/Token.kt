@@ -18,4 +18,12 @@ class Token (
     var name: String = "",
     var type: Type = Type.OTHER,
     var value: String = "",
-)
+) {
+    override fun toString(): String =
+        """
+        #$id
+        Name: $name
+        Type: ${type.display}
+        Value: $value
+        """.trimIndent() + "\n"
+}
